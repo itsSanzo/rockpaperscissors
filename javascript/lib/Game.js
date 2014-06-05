@@ -10,6 +10,8 @@ Game.prototype.PAIRS = {
 }
 
 Game.prototype.winner = function() {
+  if (this.draw()) return null;
+
   if(this.victory(this.player1.pick, this.player2.pick)) {
     return this.player1;
   }
@@ -20,4 +22,8 @@ Game.prototype.winner = function() {
 
 Game.prototype.victory = function(pick, opponentPick) {
   return this.PAIRS[pick][opponentPick];
+}
+
+Game.prototype.draw = function() {
+  return this.player1.pick === this.player2.pick;
 }
