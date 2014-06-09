@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Rock Paper Scissors Lizard Spock</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
   </head>
 
   <body>
@@ -21,19 +21,25 @@
 
     <script src='lib/Player.js'></script>
     <script src='lib/Game.js'></script>
-    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+    <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
     <script>
       $(document).ready(function(){
-        var nat = new Player('Nat');
-        var computer = new Player('Computer');
-        var game = new Game(nat, computer)
+        var p1 = new Player('Nat');
+        var p2 = new Player('Computer');
+        var game = new Game(p1, p2);
 
         $('.choices img').on('click', function(){
-          nat.picks($(this).data('pick'));
-          computer.picks('rock');
+          p1.picks($(this).data('pick'));
+          p2.picks('rock');
 
-          $('#results').prepend('<li>' + game.winningMessage() + '</li>');
-        })
+          var latestResult = $('<li>' + game.winningMessage() + '</li>');
+          latestResult.prependTo('#results').slideDown();
+
+          $('#results li:nth-child(5)').fadeOut(function() {
+            $(this).remove();
+          })
+
+        });
       })
     </script>
   </body>

@@ -1,0 +1,20 @@
+.choices img {
+	padding: 30px;
+	opacity: 0.5;
+	transition: 1s all ease;
+}
+
+.choices img:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+#results li {
+	background: grey;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px 0px;
+	color: #ffffff;
+	width: 80%;
+	display: none;
+}
