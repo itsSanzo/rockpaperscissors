@@ -30,20 +30,6 @@ body {
   top: 0;
 }
 
-.topbar input {
-  border: 0px;
-  border-radius: 5px;
-  padding: 3px 5px;
-  font-family: "Amatic SC";
-  font-size: 20px;
-  color: #918282;
-}
-
-.topbar .button {
-  color: #ffffff;
-  background: #148dfe;
-}
-
 .bottombar {
   margin-top: 20px;
   bottom: 0;

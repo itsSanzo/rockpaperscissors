@@ -10,9 +10,7 @@
 
   <div id="biggercontainer">
 
-    <div class="topbar">
-    <!--<div class="topbar-text"><input type="text" name="player-field" value="Enter your name"><input type="submit" value="Submit" class="button"></div> -->
-    </div>
+    <div class="topbar"></div>
 
     <div id="container">
 
@@ -54,9 +52,7 @@
     <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
     <script>
       $(document).ready(function(){
-
-        // var playerName = $("Enter your name");
-        var p1 = new Player("A");
+        var p1 = new Player("Player");
         var p2 = new Player('Computer');
         var game = new Game(p1, p2);
 
