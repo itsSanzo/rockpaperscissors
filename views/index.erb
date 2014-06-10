@@ -62,7 +62,10 @@
 
         $('.choices img').on('click', function(){
           p1.picks($(this).data('pick'));
-          p2.picks('rock');
+
+          var options = Object.keys(game.PAIRS);
+          var randomOption = options[Math.floor(Math.random()*options.length)];
+          p2.picks(randomOption);
 
           var latestResult = $('<li>' + game.winningMessage() + '</li>');
           latestResult.prependTo('#results').slideDown();
