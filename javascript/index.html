@@ -7,24 +7,56 @@
   </head>
 
   <body>
-    <div class="title">Rock Paper Scissors Lizard Spock</div>
+
+  <div id="biggercontainer">
+
+    <div class="topbar">
+    <!--<div class="topbar-text"><input type="text" name="player-field" value="Enter your name"><input type="submit" value="Submit" class="button"></div> -->
+    </div>
+
+    <div id="container">
+
+    <header>
+    <div class="title">Rock<br>Paper<br>Scissors<br>Lizard<br>Spock</div>
+    </header>
 
     <div class="choices">
-      <img src="images/rock.png" data-pick="rock">
-      <img src="images/paper.png" data-pick="paper">
-      <img src="images/scissors.png" data-pick="scissors">
-      <img src="images/lizard.png" data-pick="lizard">
-      <img src="images/spock.png" data-pick="spock">
+      <div class="choices-top">
+      <img src="images/rock2.png" data-pick="rock">
+      </div>
+
+      <div class="choices-middle">
+      <img src="images/spock2.png" data-pick="spock" class="img-md-1">
+      <img src="images/paper2.png" data-pick="paper" class="img-md-2">
+      </div>
+
+      <div class="choices-bottom">
+      <img src="images/lizard2.png" data-pick="lizard" class="img-bt-1">
+      <img src="images/scissors2.png" data-pick="scissors" class="img-bt-2">
+      </div>
+      
+      
     </div>
+
+    <footer>
     <ul id="results">
     </ul>
+    </footer>
+    </div>
+
+    <div class="bottombar">
+    <div class="bottombar-text">Built by <a href="https://github.com/itsmurasaki">Nat</a> at <a href="http://www.makersacademy.com" target="_blank">Makers Academy</a>.</div>
+    </div>
+    </div>
 
     <script src='lib/Player.js'></script>
     <script src='lib/Game.js'></script>
     <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
     <script>
       $(document).ready(function(){
-        var p1 = new Player('Nat');
+
+        // var playerName = $("Enter your name");
+        var p1 = new Player("A");
         var p2 = new Player('Computer');
         var game = new Game(p1, p2);
 
@@ -35,12 +67,14 @@
           var latestResult = $('<li>' + game.winningMessage() + '</li>');
           latestResult.prependTo('#results').slideDown();
 
-          $('#results li:nth-child(5)').fadeOut(function() {
+          $('#results li:nth-child(7)').fadeOut(function() {
             $(this).remove();
           })
 
         });
       })
+
+
     </script>
   </body>
 

@@ -1,7 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #9cacb6 url(../images/bg.png);
+  font-family: "Amatic SC";
+}
+
+#biggercontainer {
+  height: 100%;
+  min-height: 100%;
+}
+
+.topbar, .bottombar {
+  height: 60px;
+  width: 100%;
+  background: rgba(20,141,254, 0.4);
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  font-size: 24px;
+}
+
+.topbar {
+  margin-bottom: 20px;
+  top: 0;
+}
+
+.topbar input {
+  border: 0px;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-family: "Amatic SC";
+  font-size: 20px;
+  color: #918282;
+}
+
+.topbar .button {
+  color: #ffffff;
+  background: #148dfe;
+}
+
+.bottombar {
+  margin-top: 20px;
+  bottom: 0;
+}
+
+.bottombar a, .topbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.bottombar a:hover, .topbar a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.topbar-text {
+  margin: auto;
+  height: 40px;
+}
+
+.bottombar-text {
+  margin: auto;
+}
+
+#container {
+	width: 100%;
+	margin: 80px auto;
+	text-align: center;
+  display: flex;
+  min-height: 500px;
+}
+
+header, footer {
+  flex: 1;
+}
+
+header {
+  padding-right: 20px;
+  margin: auto 0px;
+}
+
+footer {
+  padding-left: 20px;
+  margin: auto 0px;
+}
+
+.choices {
+  width: 500px;
+}
+
+.title {
+  font-size: 50px;
+  color: #ffffff;
+  text-shadow: 0px 0px 15px #afacac;
+  line-height: 60px;
+}
+
+.choices-middle {
+  margin-top: -40px;
+}
+
+img.img-md-1 {
+  margin-right: 130px;
+}
+
+.choices-bottom {
+  margin-top: 10px;
+}
+
+img.img-bt-1 {
+  margin-right: 20px;
+}
+
 .choices img {
-	padding: 30px;
-	opacity: 0.5;
+  opacity: 0.6;
 	transition: 1s all ease;
+	width: 150px;
+  border-radius: 100%;
+  border: 10px solid white;
+  box-shadow: 0px 0px 15px #afacac;
 }
 
 .choices img:hover {
@@ -9,12 +131,13 @@
 	opacity: 1;
 }
 
+#results {
+  text-shadow: 0px 0px 15px #afacac;
+}
+
 #results li {
-	background: grey;
-	padding: 10px;
-	border-radius: 5px;
-	margin: 5px 0px;
+  font-size: 25px;
+  padding: 10px 0px;
 	color: #ffffff;
-	width: 80%;
 	display: none;
 }
