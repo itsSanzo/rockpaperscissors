@@ -11,3 +11,7 @@ This project's aim was to build a Rock Paper Scissors game in Javascript. We lat
 * TDD with Jasmine
 * HTML & CSS
 * Sinatra
+
+## Use it!
+
+You can try the app [here](http://rockpaperscissorsetc.herokuapp.com/) :rocket:
